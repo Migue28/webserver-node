@@ -15,8 +15,10 @@ app.get("/", function (req, res) {
   });
 });
 
-app.get("/user", function (req, res) {
-  res.send("Hola User");
+app.get("/about", function (req, res) {
+  res.render("about.hbs", {
+    year: new Date().getFullYear(),
+  });
 });
 
 app.listen(3000, () => {
